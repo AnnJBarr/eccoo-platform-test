@@ -33,6 +33,7 @@ export class AppController {
   @Render('page-frontend')
   getFrontend(@Query() query) {
     return {
+      links,
       query: query,
     };
   }
