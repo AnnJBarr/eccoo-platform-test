@@ -1,11 +1,14 @@
 import { Controller, Get, Render, Query } from '@nestjs/common';
 import { AppService } from './app.service';
 
+
 const links = {
   Home: '/',
   Frontend: '/frontend',
   Backend: '/backend',
 };
+
+
 
 /**
  * The page controllers Render the specified view templates
@@ -22,6 +25,7 @@ export class AppController {
   @Render('page')
   getHomepage() {
     return {
+       
       links,
       message: 'Welcome to the Equal Care Co-op test app',
     };
@@ -33,6 +37,7 @@ export class AppController {
   @Render('page-frontend')
   getFrontend(@Query() query) {
     return {
+
       links,
       query: query,
     };

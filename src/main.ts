@@ -6,8 +6,7 @@ import { join } from 'path';
 import { Logger } from '@nestjs/common';
 
 const viewPaths = [
-  join(__dirname, '..', 'views'),
-  join(__dirname, '..', 'public')
+  join(__dirname, '..', 'views')
 ];
 const port = 8080;
 
@@ -22,6 +21,7 @@ async function bootstrap() {
   app.setViewEngine('html');
 
   app.useStaticAssets(join(__dirname, '..', 'public'), { prefix: '/assets/' });
+
 
   await app.listen(port);
   Logger.log(`App listening on port ${port}`, 'Main');
