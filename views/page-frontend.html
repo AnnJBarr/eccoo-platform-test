@@ -1,22 +1,24 @@
 {% extends 'page.html' %}
 
-{% macro formfield(id, label, type="text") %}
+{% macro formfield(id, label, type="text", placeholder) %}
 <fieldset>
-  <label class="coloured" for="{{ id }}">{{ label }}</label><input id="{{ id }}" name="{{ id }}" type="{{ type }}" />
+  <label class="coloured" for="{{ id }}">{{ label }}</label><input id="{{ id }}" name="{{ id }}" type="{{ type }}" placeholder="{{ placeholder }}" />
 </fieldset>
 {% endmacro %}
 
-{% macro emailfield(id, label, type="email") %}
+{% macro emailfield(id, label, type="email", placeholder) %}
 <fieldset>
-  <label class="coloured" for="{{ id }}">{{ label }}</label><input id="{{ id }}" name="{{ id }}" type="{{ type }}" />
+  <label class="coloured" for="{{ id }}">{{ label }}</label><input id="{{ id }}" name="{{ id }}" type="{{ type }}" placeholder="{{ placeholder }}" />
 </fieldset>
 {% endmacro %}
+
+
 
 {% block content %}
 
 <form>
-  {{ formfield("name", "Name:") }}
-  {{ emailfield("email", "Email:") }}
+  {{ formfield("name", "Name:", "What should we call you?") }}
+  {{ emailfield("email", "Email:", "e.g. me@example.com") }}
 
   <button>Sign Up</button>
 </form>
