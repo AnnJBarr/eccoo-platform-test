@@ -2,21 +2,23 @@
 
 {% macro formfield(id, label, type="text", placeholder) %}
 <fieldset>
-  <label class="coloured" for="{{ id }}">{{ label }}</label><input id="{{ id }}" name="{{ id }}" type="{{ type }}" placeholder="{{ placeholder }}" />
+  <label class="coloured" for="{{ id }}">{{ label }}</label><input id="{{ id }}" name="{{ id }}" type="{{ type }}"
+    placeholder="{{ placeholder }}" />
 </fieldset>
 {% endmacro %}
 
 {% macro emailfield(id, label, type="email", placeholder) %}
 <fieldset>
-  <label class="coloured" for="{{ id }}">{{ label }}</label><input id="{{ id }}" name="{{ id }}" type="{{ type }}" placeholder="{{ placeholder }}" />
+  <label class="coloured" for="{{ id }}">{{ label }}</label><input id="{{ id }}" name="{{ id }}" type="{{ type }}"
+    placeholder="{{ placeholder }}" />
 </fieldset>
 {% endmacro %}
 
 {%macro supportfor(id, label1, label2, type="radio") %}
 <input type="{{ type }}" id="radio1" name="{{ id }}" value="{{ label1 }}" checked>
-  <label for="radio1">{{ label1 }}</label><br>
-  <input type="{{ type }}" id="radio2" name="{{ id }}" value="{{ label1 }}">
-  <label for="radio2">{{ label2 }}</label><br>
+<label for="radio1">{{ label1 }}</label><br>
+<input type="{{ type }}" id="radio2" name="{{ id }}" value="{{ label1 }}">
+<label for="radio2">{{ label2 }}</label><br>
 {% endmacro %}
 
 

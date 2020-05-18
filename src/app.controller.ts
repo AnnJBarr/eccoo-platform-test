@@ -16,7 +16,7 @@ const links = {
  */
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+  constructor(private readonly appService: AppService) { }
 
   /**
    * Homepage
@@ -25,7 +25,7 @@ export class AppController {
   @Render('page')
   getHomepage() {
     return {
-       
+
       links,
       message: 'Welcome to the Equal Care Co-op test app',
     };

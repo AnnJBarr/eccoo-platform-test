@@ -4,8 +4,12 @@
 }
 
 body, input, button {
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 12pt;  
+  /* font-family: 'Times New Roman', Times, serif; */
+  /* font-size: 12pt; */
+  color: #424747;
+  font-family: 'Roboto Slab', serif;
+  /* font-family: Gill Sans Extrabold, sans-serif; */
+  font-size: 20pt;  
 }
 
 body > * {

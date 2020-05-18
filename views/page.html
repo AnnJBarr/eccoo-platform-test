@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>eccoo test</title>
   <link rel="stylesheet" href="/assets/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <header>
-<img src ="/assets/journey.jpg" alt="Client journey image">
+    <img src="/assets/journey.jpg" alt="Client journey image">
   </header>
+  Some random text to check the font
   <nav>
     <ol>
       {% for name, link in links %}
-        <li><a href="{{ link }}">{{ name }}</a></li>
+      <li><a href="{{ link }}">{{ name }}</a></li>
       {% endfor %}
     </ol>
   </nav>
   <main role="main">
-  {% block content %}
+    {% block content %}
     {{ message }}
-  {% endblock %}
+    {% endblock %}
   </main>
 </body>
+
 </html>
