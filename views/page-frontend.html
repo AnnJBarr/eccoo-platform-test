@@ -1,16 +1,25 @@
 {% extends 'page.html' %}
 
 {% macro formfield(id, label, type="text") %}
-  <fieldset>
-    <label class="coloured" for="{{ id }}">{{ label }}</label><input id="{{ id }}" name="{{ id }}" type="{{ type }}" />
-  </fieldset>
+<fieldset>
+  <label class="coloured" for="{{ id }}">{{ label }}</label><input id="{{ id }}" name="{{ id }}" type="{{ type }}" />
+</fieldset>
+{% endmacro %}
+
+{% macro emailfield(id, label, type="email") %}
+<fieldset>
+  <label class="coloured" for="{{ id }}">{{ label }}</label><input id="{{ id }}" name="{{ id }}" type="{{ type }}" />
+</fieldset>
 {% endmacro %}
 
 {% block content %}
-  <form>
-    {{ formfield("name", "Name:") }}
-    <button>Click me</button>
-  </form>
 
-  <code><pre>{{ query | dump(2) }}</pre></code>
+<form>
+  {{ formfield("name", "Name:") }}
+  {{ emailfield("email", "Email:") }}
+
+  <button>Sign Up</button>
+</form>
+
+<code><pre>{{ query | dump(2) }}</pre></code>
 {% endblock %}

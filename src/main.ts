@@ -6,7 +6,8 @@ import { join } from 'path';
 import { Logger } from '@nestjs/common';
 
 const viewPaths = [
-  join(__dirname, '..', 'views')
+  join(__dirname, '..', 'views'),
+  join(__dirname, '..', 'public')
 ];
 const port = 8080;
 
