@@ -53,6 +53,21 @@ img {
   height: auto;
 }
 
+
+.signupbtn {
+  background-color: #00816C;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  /* font-size: 20px; */
+  width: 40%;
+}
+
 .headerimage {
   display: block;
   margin-left: auto;
