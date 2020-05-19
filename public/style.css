@@ -1,8 +1,7 @@
 @media screen and (max-width: 480px) {
  img {
    max-width: 50%;
-   
-  }
+   }
   
 }
 
@@ -69,7 +68,6 @@ fieldset {
   text-align: left;
   text-decoration: none;
   display: block;
-  /* font-size: 20px; */
   width: 80%;
 }
 
