@@ -3,18 +3,22 @@
 {% macro formfield(id, label, type, placeholder) %}
 <fieldset>
   <label class="coloured" for="{{ id }}">{{ label }}</label><input id="{{ id }}" name="{{ id }}" type="{{ type }}"
-    placeholder="{{ placeholder }}" required maxlength = "50"/>
+    placeholder="{{ placeholder }}" required maxlength="50" />
 </fieldset>
 {% endmacro %}
 
-
-
 {%macro supportfor(id, label1, label2, type="radio") %}
 <fieldset class="radio">
-  <input type="{{ type }}" id="radio1" name="{{ id }}" value="{{ label1 }}">
-  <label for="radio1">{{ label1 }}</label><br>
-  <input type="{{ type }}" id="radio2" name="{{ id }}" value="{{ label1 }}" checked>
-  <label for="radio2">{{ label2 }}</label><br>
+  
+  <label class="container">{{ label1 }}
+    <input type="radio" name="{{ id }}" value="{{ label1 }}">
+    <span class="checkmark"></span>
+  </label>
+  <label class="container">{{ label2 }}
+    <input type="radio" checked="checked" name="{{ id }}" value="{{ label2 }}">
+    <span class="checkmark"></span>
+  </label>
+
 </fieldset>
 {% endmacro %}
 

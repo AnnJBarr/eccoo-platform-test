@@ -91,14 +91,14 @@ label[class="coloured"] {
   width: 30%;
 }
 
-input[type=text]{
+input[type=text], [type=email]{
   border: black;
   border-radius: 4px;
   padding: 10px;
 
 }
 
-input[type=radio] {
+/* input[type=radio] {
   border: 0px;
   padding: 20px;
   margin-bottom: 10px;
@@ -106,11 +106,11 @@ input[type=radio] {
   height: 40px;
   display: inline-block;
   vertical-align: middle;
-}
-label[type=radio] {
+} */
+/* label[type=radio] {
   display: inline-block;
   vertical-align: middle;
-}
+} */
 
 .signupbtn {
   background-color: #00816C;
@@ -129,4 +129,68 @@ label[type=radio] {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 65px;
+  margin-bottom: 27px;
+  cursor: pointer;
+  font-size: 25px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a white background */
+.container input:checked ~ .checkmark {
+  background-color: white;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ 	top: 5px;
+	left: 5px;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background: black;
 }
