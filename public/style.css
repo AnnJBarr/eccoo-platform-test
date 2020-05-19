@@ -4,11 +4,8 @@
 }
 
 body, input, button {
-  /* font-family: 'Times New Roman', Times, serif; */
-  /* font-size: 12pt; */
   color: #424747;
   font-family: 'Roboto Slab', serif;
-  /* font-family: Gill Sans Extrabold, sans-serif; */
   font-size: 20pt;  
 }
 
@@ -18,12 +15,27 @@ body > * {
   margin-right: auto;
 }
 
+header {
+  padding-bottom: 20px;
+}
 nav ol {
   list-style: none;
-  padding: 0;
+  padding-bottom: 20px;
   display: flex;
 }
 
 nav ol > li {
   padding-right: 1em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.headerimage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* width: 100%; */
 }
