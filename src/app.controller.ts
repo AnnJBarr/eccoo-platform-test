@@ -40,6 +40,7 @@ export class AppController {
 
       links,
       query: query,
+
     };
   }
   /**

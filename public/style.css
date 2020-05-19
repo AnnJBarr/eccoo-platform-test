@@ -1,7 +1,9 @@
 @media screen and (max-width: 480px) {
  img {
-    display: none;
+   max-width: 50%;
+   
   }
+  
 }
 
 
@@ -98,20 +100,6 @@ input[type=text], [type=email]{
 
 }
 
-/* input[type=radio] {
-  border: 0px;
-  padding: 20px;
-  margin-bottom: 10px;
-  width: 40px;
-  height: 40px;
-  display: inline-block;
-  vertical-align: middle;
-} */
-/* label[type=radio] {
-  display: inline-block;
-  vertical-align: middle;
-} */
-
 .signupbtn {
   background-color: #00816C;
   border: none;
@@ -137,7 +125,7 @@ input[type=text], [type=email]{
   padding-left: 65px;
   margin-bottom: 27px;
   cursor: pointer;
-  font-size: 25px;
+  font-size: 20pt;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;

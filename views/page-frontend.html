@@ -7,9 +7,9 @@
 </fieldset>
 {% endmacro %}
 
-{%macro supportfor(id, label1, label2, type="radio") %}
+{%macro formradiofield(id, label1, label2, type="radio") %}
 <fieldset class="radio">
-  
+
   <label class="container">{{ label1 }}
     <input type="radio" name="{{ id }}" value="{{ label1 }}">
     <span class="checkmark"></span>
@@ -28,7 +28,7 @@
 <form>
   {{ formfield("name", "Name", "text", "What should we call you?") }}
   {{ formfield("email", "Email", "email", "e.g. me@example.com") }}
-  {{ supportfor("supportfor", "The support is for me", "The support is for someone else")}}
+  {{ formradiofield("supportfor", "The support is for me", "The support is for someone else")}}
   <button class="signupbtn">Sign up</button>
 </form>
 
