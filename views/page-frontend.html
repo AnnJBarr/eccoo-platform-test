@@ -1,11 +1,12 @@
 {% extends 'page.html' %}
 
-{% macro formfield(id, label, type="text", placeholder) %}
+{% macro formfield(id, label, type, placeholder) %}
 <fieldset>
   <label class="coloured" for="{{ id }}">{{ label }}</label><input id="{{ id }}" name="{{ id }}" type="{{ type }}"
     placeholder="{{ placeholder }}" />
 </fieldset>
 {% endmacro %}
+
 
 
 {%macro supportfor(id, label1, label2, type="radio") %}
@@ -21,8 +22,8 @@
 {% block content %}
 
 <form>
-  {{ formfield("name", "Name", "What should we call you?") }}
-  {{ formfield("email", "Email", "e.g. me@example.com") }}
+  {{ formfield("name", "Name", "text", "What should we call you?") }}
+  {{ formfield("email", "Email", "email", "e.g. me@example.com") }}
   {{ supportfor("supportfor", "The support is for me", "The support is for someone else")}}
   <button class="signupbtn">Sign up</button>
 </form>
