@@ -9,10 +9,12 @@
 
 
 {%macro supportfor(id, label1, label2, type="radio") %}
-<input type="{{ type }}" id="radio1" name="{{ id }}" value="{{ label1 }}" >
-<label for="radio1">{{ label1 }}</label><br>
-<input type="{{ type }}" id="radio2" name="{{ id }}" value="{{ label1 }}" checked>
-<label for="radio2">{{ label2 }}</label><br>
+<fieldset class="radio">
+  <input type="{{ type }}" id="radio1" name="{{ id }}" value="{{ label1 }}">
+  <label for="radio1">{{ label1 }}</label><br>
+  <input type="{{ type }}" id="radio2" name="{{ id }}" value="{{ label1 }}" checked>
+  <label for="radio2">{{ label2 }}</label><br>
+</fieldset>
 {% endmacro %}
 
 
