@@ -7,17 +7,11 @@
 </fieldset>
 {% endmacro %}
 
-{% macro emailfield(id, label, type="email", placeholder) %}
-<fieldset>
-  <label class="coloured" for="{{ id }}">{{ label }}</label><input id="{{ id }}" name="{{ id }}" type="{{ type }}"
-    placeholder="{{ placeholder }}" />
-</fieldset>
-{% endmacro %}
 
 {%macro supportfor(id, label1, label2, type="radio") %}
-<input type="{{ type }}" id="radio1" name="{{ id }}" value="{{ label1 }}" checked>
+<input type="{{ type }}" id="radio1" name="{{ id }}" value="{{ label1 }}" >
 <label for="radio1">{{ label1 }}</label><br>
-<input type="{{ type }}" id="radio2" name="{{ id }}" value="{{ label1 }}">
+<input type="{{ type }}" id="radio2" name="{{ id }}" value="{{ label1 }}" checked>
 <label for="radio2">{{ label2 }}</label><br>
 {% endmacro %}
 
@@ -25,8 +19,8 @@
 {% block content %}
 
 <form>
-  {{ formfield("name", "Name:", "What should we call you?") }}
-  {{ emailfield("email", "Email:", "e.g. me@example.com") }}
+  {{ formfield("name", "Name", "What should we call you?") }}
+  {{ formfield("email", "Email", "e.g. me@example.com") }}
   {{ supportfor("supportfor", "The support is for me", "The support is for someone else")}}
   <button class="signupbtn">Sign up</button>
 </form>

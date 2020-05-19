@@ -53,6 +53,37 @@ img {
   height: auto;
 }
 
+fieldset {
+  border: 2px solid grey;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  /* padding-top: 4px;
+  padding-bottom: 4px; */
+  text-align: left;
+  text-decoration: none;
+  display: block;
+  /* font-size: 20px; */
+  width: 80%;
+}
+
+
+label[class="coloured"] {
+  background-color: #327f96;
+  color: #fff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  display: inline-block;
+  width: 30%;
+  /* font-size: 20px; */
+}
+
+input[type=text]{
+  border: black;
+  border-radius: 4px;
+  padding: 10px;
+
+}
 
 .signupbtn {
   background-color: #00816C;
